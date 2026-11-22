@@ -1,0 +1,6 @@
+{
+  "name": "LensaSave",
+  "description": "Studio gelap modern untuk mengunduh Post, Carousel, Reels, Audio Reels, dan Story Instagram hanya dengan tautan URL.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

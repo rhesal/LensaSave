@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>LensaSave — Studio Pengunduh Media Instagram</title>
+    <meta name="description" content="Studio gelap modern untuk mengunduh Post, Carousel, Reels, Audio Reels, dan Story Instagram hanya dengan tautan URL." />
+    <meta name="theme-color" content="#09090B" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem('lensasave_theme_v1');
+          var mode = saved === 'light' ? 'light' : 'dark';
+          var root = document.documentElement;
+          if (mode === 'dark') {
+            root.classList.add('dark');
+            root.style.colorScheme = 'dark';
+          } else {
+            root.classList.remove('dark');
+            root.style.colorScheme = 'light';
+            var meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute('content', '#FAFAFA');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="LensaSave" />
+    <meta property="og:title" content="LensaSave — Studio Pengunduh Media Instagram" />
+    <meta property="og:description" content="Studio gelap modern untuk mengunduh Post, Carousel, Reels, Audio Reels, dan Story Instagram hanya dengan tautan URL." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#FAFAFA] text-[#09090B] dark:bg-[#09090B] dark:text-[#FAFAFA] antialiased selection:bg-[#09090B] selection:text-[#FAFAFA] dark:selection:bg-[#FAFAFA] dark:selection:text-[#09090B]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
